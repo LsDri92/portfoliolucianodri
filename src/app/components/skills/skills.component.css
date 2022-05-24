@@ -1,0 +1,23 @@
+.logoimg {
+    padding: 20px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+p {
+    font-size: medium;
+    color: darkmagenta;
+    padding: 20px;
+}
+
+img title {
+    border: 20cm;
+    border-color: red;
+    font-size: 15pt;
+    color: blueviolet;
+}
+

@@ -1,0 +1,6 @@
+div ul li {
+    padding: 10px;
+    border: 2em;
+    border-top: 2pt;
+    border-color: rgb(0, 0, 0);
+}

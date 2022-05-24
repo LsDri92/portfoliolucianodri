@@ -1,1 +1,183 @@
-/* You can add global styles to this file, and also import other style files */
+.header{
+    background-color: #02999E;
+    border-color: black;
+    font-size: 20px; 
+    display: flex;
+    width: 100%;
+
+}
+
+
+.logo-sesion{
+    display: inline-flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+   
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+.header ul li{
+    display: inline-block;
+    
+}
+
+.header ul li a{
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    transition: all 0.4s linear;   
+
+}
+
+.header ul li a:hover{
+    background-color: #00EB87;
+    color: rgb(26, 28, 29);
+}
+
+.logo{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container-fluid{
+    border-style: double;
+    border-bottom: #00EB87;
+    border: #00EB87;
+}
+
+.sobremi{
+    font-size: 14pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-justify: newspaper;
+    border:#02999E;
+    border-style: solid;
+    display: inline-block;
+    border-radius: 12%;
+    color: whitesmoke;
+}
+
+.sobremidesc{
+    color: aqua;
+}
+
+.card{
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.presentacion{
+    background-image: url(.\assets\img\5125962.jpg);
+   padding: 14pt;
+    border: #02999E;
+    border-style: double;
+    border-width: 3pt;
+}
+
+
+.myCard{  
+    padding: 2pt;
+    margin: 2pt;
+}
+
+.card-body{
+    margin: 3pt;
+    padding: 3pt;
+}
+.card-img-top{
+    border-radius: 40%;
+    border-color: #00EB87;  
+}
+
+
+.card-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    font-style: oblique;
+    color: rgb(255, 255, 255);  
+}
+
+.card-text{
+    font-family: Arial;
+    font-size: 12pt;   
+    color: rgb(255, 255, 255);
+}
+
+
+
+.h2{
+    padding: 10px;
+    margin: 8px;
+}
+
+.formation ul li{
+   
+    margin: 5px;
+    padding: 5px;
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formation{
+    margin: 4em;
+    padding: 8em;
+    border:  #02999E ;
+    border-style: solid;
+    border-radius: 20%;
+    border-left: 20px;
+    border-right: 20px;
+}
+
+.fa-edit{
+    color: rgb(253, 142, 52);
+    
+}
+
+.fa-times{
+    color: rgb(253, 142, 52);
+}
+
+.btn-edit{
+    color: black;
+    size: 25pt;
+    display: inline-block;
+}
+
+.btn-right{
+    float: right;
+    padding: 5px;
+}
+
+
+.proyect-box{
+    margin: 20px;
+    padding: 10px 10px;
+    width: 150px;
+    height: 80px;
+    border-radius: 20%;
+    border-style: solid;
+    border: orangered;
+}
+
+.footer{
+    margin: 0px;
+    padding: 10px 10px;
+    background-color: #02999E;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
