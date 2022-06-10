@@ -9,9 +9,9 @@ import { FormacionComponent } from './components/formacion/formacion.component';
 import { ExpLaboralComponent } from './components/exp-laboral/exp-laboral.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +22,13 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     ExpLaboralComponent,
     SkillsComponent,
     FooterComponent,
-    IniciarSesionComponent,
     PortfolioComponent,
     ProyectosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
