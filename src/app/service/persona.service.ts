@@ -14,6 +14,5 @@ export class PersonaService {
 
   public getPersona(): Observable <persona>{
     return this.http.get<persona>(this.URL+'traer');
-    console.log("persona geteada");
   }
 }
