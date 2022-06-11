@@ -9,7 +9,6 @@ import { FormacionComponent } from './components/formacion/formacion.component';
 import { ExpLaboralComponent } from './components/exp-laboral/exp-laboral.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,7 +22,6 @@ import { HttpClientModule } from '@angular/common/http';
     ExpLaboralComponent,
     SkillsComponent,
     FooterComponent,
-    PortfolioComponent,
     ProyectosComponent
   ],
   imports: [
