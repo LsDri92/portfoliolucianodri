@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { skills } from 'src/app/model/skills.model';
 import { SkillsService } from 'src/app/service/skills.service';
@@ -8,12 +9,21 @@ import { SkillsService } from 'src/app/service/skills.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  skills: skills = new skills ("","", "")
+  public skills: skills[]=[];
 
   constructor(public skillService: SkillsService) { }
 
   ngOnInit(): void {
-    this.skillService.getSkills().subscribe(data => {this.skills = data})
+    this.getSkills();
   }
-
+  public getSkills():void {
+    this.skillService.getSkills().subscribe({
+      next:(Response: skills[]) => {
+        this.skills=Response;
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+      }
 }

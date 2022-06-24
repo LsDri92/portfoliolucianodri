@@ -1,40 +1,16 @@
-<div class="container-fluid formation">
+<div class="container-fluid formation" *ngFor="let skills for skills">
    
     <h2 class="h2">Skills y Conocimientos</h2>
     <ul>
         <li>
             <img class="logoimg" title={{skills.descripcion}}
-                onmouseover="showInfo()" src={{skills.url_logo}} alt={{skills.nombre}} width="100px" height="100px">
-            <img class="logoimg" title={{skills.descripcion}}
                 src={{skills.url_logo}} alt={{skills.nombre}} width="100px" height="100px">
-            <img class="logoimg" title="Framework utilizado para poder darle estilo al FrontEnd"
-                src=".\assets\img\Bootstrap_logo.svg.png" alt="bootstrap" width="100px" height="100px">
-            <img class="logoimg"
-                title="Lenguaje de programación utilizado para hacer de tu página web, una página interactiva"
-                src=".\assets\img\js.png" alt="javascript" width="100px" height="100px">
-            <img class="logoimg" title="Framework utilizado para crear SPA o Paginas Web de una sola página"
-                src=".\assets\img\angular.png" alt="angular" width="200px" height="200px">
-            <img class="logoimg" title="Es un lenguaje fuertemente tipado que facilita el uso y compila en javascript"
-                src=".\assets\img\ts.png" alt="typescript" width="100px" height="100px">
+           
         </li>
 
+       
         <li>
-            <img class="logoimg" title="Sistema de gestión de Bases de datos" src=".\assets\img\mysql.png" alt="My Sql"
-                width="140px" height="150px">
-            <img class="logoimg" title="Lenguaje de programación orientado a Objetos" src=".\assets\img\java.jpg"
-                alt="Java" width="130px" height="150px">
-            <img class="logoimg" title="Herramienta que permite crear un proyectado orientado a trabajar con el BackEnd"
-                src=".\assets\img\spring-boot-logo.png" alt="Springboot" width="180px" height="120px">
-            <img class="logoimg" title="Plataforma para el sistema de control de Versiones, mejor conocido como Git"
-                src=".\assets\img\GitHub-Mark.png" alt="Github" width="100px" height="100px">
-        </li>
-
-        <li>
-            <img class="logoimg"
-                title="Plataforma de desarrollo de videojuegos 2D para HTML5. Desarrollo centrado en typescript"
-                src=".\assets\img\pixijs.png" alt="Pixijs" width="200px" height="140px">
-
-            <p>Ingles - Avanzado</p>
+                    <p>Ingles - Avanzado</p>
         </li>
 
     </ul>
