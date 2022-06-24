@@ -1,22 +1,15 @@
-<div class="container-fluid formation">
+<div class="container-fluid formation" *ngFor="let proyectos of proyectos">
 
    
     <h2 class="h2">Proyectos </h2>
 
-    <a href="#"><img src=".\assets\img\portfolio_image.png" alt="Proyecto Portfolio" width="60%"  height="auto"> </a>
-
-    <h2 class="h21">Portfolio en Angular</h2>
-
-    <p>Portfolio desarrollado en Angular, con HTML5, Css3, Bootstrap y javascript en el marco de "#YoProgramo Argentina
-        Programa" </p>
+    <a href="{{proyectos.url_proyecto}}"><img src="{{proyectos.url_imagen}}" alt="Proyecto Portfolio" width="60%"  height="auto"> </a>
 
 
-    <a href="https://lsdri92.itch.io/jumping-cat-flash-v005"><img src=".\assets\img\jumpingcatflash.png"
-            alt="Proyecto Videojuego" width="60%"  height="auto"> </a>
+    <p>{{proyectos.descripcion}} </p>
 
-    <h2 class="h21">Jumping Cat Flash V0.0.5</h2>
 
-    <p> Prototipo de Videojuego plataformero SideScroller, Desarrollado en PixiJs </p>
+    
 
 
 </div>

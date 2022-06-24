@@ -12,7 +12,7 @@ export class FormacionService {
 
   constructor(private http: HttpClient ) { }
 
-  public getFormacion(): Observable <formacion>{
-    return this.http.get<formacion>(this.URL+'traer');
+  public getFormacion(id: number): Observable <formacion>{
+    return this.http.get<formacion>(this.URL+'traer/'+id);
   }
 }
