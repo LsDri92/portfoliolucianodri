@@ -1,11 +1,19 @@
 <div class="container-fluid formation">
     <h2 class="h2">Skills y Conocimientos</h2>
-    <div *ngFor="let skills for Skills">
+    <div *ngFor="let skills of skills">
 
 
-        
-               <a href=""> <img src="{{skills.url_logo}}" class="logoimg" title={{skills.descripcion}} alt={{skills.nombre}}
-                    width="100px" height="100px"> </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="progress-title">{{skills.nombre}}</h3>
+                    <div class="progress">
+                        <div class="progress-bar"  >
+                            <div class="progress-value">{{skills.descripcion}}</div>
+                        </div>
+                    </div>
+        </div>
+      
 
            
     </div>
