@@ -2,21 +2,12 @@
 
     
     <h2 class="h2">Formación</h2>
-    <ul>
-        <li> Titulo secundario en "Economia y Gestión en las Organizaciones" -Instituto Secundario
-            Privado
-            "Saint Exupery" - Concordia, Entre Rios, Argentina - 2005 - 2010</li>
+    <div >
+    <ul *ngFor="let formacion of formacion">
+        <li>{{formacion.titulo}} - {{formacion.descripcion}} -  {{formacion.ciudad}} - {{formacion.ano_inicio}} - {{formacion.ano_final}} </li>
 
-        <li>"Argentina Programa" 1ra Etapa - #SeProgramar. INTI. Ministerio de Desarrollo Productivo,
-            Argentina
-            - 2021 </li>
-
-        <li>"Argentina Programa" 2da Etapa - #YoProgramo. INTI. Ministerio de Desarrollo Productivo,
-            Argentina -
-            2022</li>
-
-        <li>"Curso de desarrollo de Videojuegos en PixiJs" - "Rabbit Hole" Incubadora de videojuegos - 2022</li>
+       
         
     </ul>
-
+</div>
 </div>

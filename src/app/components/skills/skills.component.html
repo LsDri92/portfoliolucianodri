@@ -1,18 +1,20 @@
-<div class="container-fluid formation" *ngFor="let skills for skills">
-   
+<div class="container-fluid formation">
     <h2 class="h2">Skills y Conocimientos</h2>
-    <ul>
-        <li>
-            <img class="logoimg" title={{skills.descripcion}}
-                src={{skills.url_logo}} alt={{skills.nombre}} width="100px" height="100px">
-           
-        </li>
+    <div *ngFor="let skills for skills">
 
-       
-        <li>
-                    <p>Ingles - Avanzado</p>
-        </li>
+        
+        <ul>
+            <li>
+                <img class="logoimg" title={{skills.descripcion}} src={{skills.url_logo}} alt={{skills.nombre}}
+                    width="100px" height="100px">
 
-    </ul>
+            </li>
 
+
+            <li>
+                <p>Ingles - Avanzado</p>
+            </li>
+
+        </ul>
+    </div>
 </div>

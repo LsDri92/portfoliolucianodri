@@ -8,11 +8,12 @@ import { formacion } from '../model/formacion.model';
 })
 export class FormacionService {
 
-  URL = 'https://floating-hollows-77784.herokuapp.com/api/formacion/';
+  URL = 'https://floating-hollows-77784.herokuapp.com/api/formacion';
 
   constructor(private http: HttpClient ) { }
 
-  public getFormacion(id: number): Observable <formacion>{
-    return this.http.get<formacion>(this.URL+'traer/'+id);
-  }
+  public getFormacion(): Observable <formacion[]>{
+    return this.http.get<formacion[]>(`${this.URL}/read `);
+    }
+  
 }
