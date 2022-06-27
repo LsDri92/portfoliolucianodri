@@ -11,7 +11,7 @@ import { SkillsService } from 'src/app/service/skills.service';
 export class SkillsComponent implements OnInit {
   public skills: skills[]=[];
 
-  constructor(public skillsService: SkillsService) { }
+  constructor(private skillsService: SkillsService) { }
 
   ngOnInit(): void {
     this.getSkills();

@@ -2,19 +2,19 @@
     <h2 class="h2">Skills y Conocimientos</h2>
     <div *ngFor="let skills for skills">
 
-        
+
         <ul>
             <li>
-                <img class="logoimg" title={{skills.descripcion}} src="{{skills.url_logo}}" alt={{skills.nombre}}
+                <img src="{{skills.url_logo}}" class="logoimg" title={{skills.descripcion}} alt={{skills.nombre}}
                     width="100px" height="100px">
 
             </li>
-
-
-            <li>
-                <p>Ingles - Avanzado</p>
-            </li>
-
         </ul>
     </div>
+
+    <ul>
+        <li>
+            <p>Ingles - Avanzado</p>
+        </li>
+    </ul>
 </div>
