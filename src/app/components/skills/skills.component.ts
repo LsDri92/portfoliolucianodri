@@ -11,13 +11,13 @@ import { SkillsService } from 'src/app/service/skills.service';
 export class SkillsComponent implements OnInit {
   public skills: skills[]=[];
 
-  constructor(public skillService: SkillsService) { }
+  constructor(public skillsService: SkillsService) { }
 
   ngOnInit(): void {
     this.getSkills();
   }
   public getSkills():void {
-    this.skillService.getSkills().subscribe({
+    this.skillsService.getSkills().subscribe({
       next:(Response: skills[]) => {
         this.skills=Response;
       },

@@ -1,7 +1,10 @@
-<div class="container-fluid formation" *ngFor="let proyectos of proyectos">
 
+
+<div class="container-fluid formation" >
+    <h2 class="h2" >Proyectos </h2>
+    
+   <div *ngFor="let proyectos of proyectos">
    
-    <h2 class="h2">Proyectos </h2>
 
     <a href="{{proyectos.url_proyecto}}"><img src="{{proyectos.url_imagen}}" alt="Proyecto Portfolio" width="60%"  height="auto"> </a>
 
@@ -10,6 +13,6 @@
 
 
     
-
+</div>
 
 </div>
