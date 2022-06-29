@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -37,8 +38,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HttpClientModule,
     RouterModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    FormsModule
     
   
   ],
