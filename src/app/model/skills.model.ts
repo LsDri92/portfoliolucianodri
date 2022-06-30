@@ -1,5 +1,5 @@
 export class skills {
-    id?: number;
+    idSkill?: number;
     url_logo: String ;
     nombre: String ;
     descripcion: String ;

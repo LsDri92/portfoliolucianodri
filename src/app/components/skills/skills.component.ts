@@ -61,10 +61,11 @@ export class SkillsComponent implements OnInit {
             alert(error.message);
             addForm.reset();
           }
-        });
+        })
       }
 
       public onEditSkill(skills: skills){
+        this.editSkills=skills;
         document.getElementById('add-skills-form')?.click();
         this.skillsService.editSkills(skills).subscribe({
           next: (response:skills) =>{
@@ -76,9 +77,9 @@ export class SkillsComponent implements OnInit {
         }
       })
 }
-public onDeleteSkill(id: number ):void{
+public onDeleteSkill(idSkill: number ):void{
 
-  this.skillsService.deleteSkills(id).subscribe({
+  this.skillsService.deleteSkills(idSkill).subscribe({
     next: (response:void) =>{
       console.log(response);
         this.getSkills();
