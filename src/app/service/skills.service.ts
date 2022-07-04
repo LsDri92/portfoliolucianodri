@@ -25,7 +25,7 @@ export class SkillsService {
     }
   
     public deleteSkills(idSkill: number):Observable<void>{
-      return this.http.delete<void>(`${this.URL} /delete/${idSkill}`);
+      return this.http.delete<void>(`${this.URL} /delete/${idSkill}/`);
     }
   }
   
