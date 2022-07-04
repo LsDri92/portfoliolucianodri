@@ -21,11 +21,11 @@ export class SkillsService {
     }
   
     public editSkills(skills: skills):Observable <skills>{
-      return this.http.put<skills>(`${this.URL} /edit`, skills);
+      return this.http.put<skills>(`${this.URL}/edit`, skills);
     }
   
     public deleteSkills(idSkill: number):Observable<void>{
-      return this.http.delete<void>(`${this.URL} /delete/${idSkill}/`);
+      return this.http.delete<void>(`${this.URL}/delete/${idSkill}/`);
     }
   }
   
