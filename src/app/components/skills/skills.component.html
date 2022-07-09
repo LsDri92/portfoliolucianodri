@@ -1,11 +1,12 @@
 <div class="container-fluid formation">
     <h2 class="h2">Skills y Conocimientos</h2>
-    <div class="text-center"></div>
     <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal" (click)="onOpenModal('add')">
         <a class="nav-link" style="color:blanchedalmond">
             Añadir Skills <span class="sr-only"> (current) </span>
         </a>
     </button>
+    <div class="text-center"></div>
+ 
     <div id="main-container">
     <div *ngFor="let skills of skills">
         
@@ -82,51 +83,7 @@
     </div>
 
     <!-- Editar Modal-->
-    <div class="modal fade" id="editSkillsModal" tabindex="-1" role="dialog" aria-labelledby="editSkillsModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal header">
-                    <h5 class="modal-title" id="editSkillsModalLabel">
-                        Editar Skills {{editSkills?.nombre}}
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form #editForm="ngForm">
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" ngModel="{{ editSkills?.nombre }}" name="nombre" class="form-control"
-                                id="nombre" aria-describedby="emailHelp" placeholder="Nombre" />
-                        </div>
-                        <input type="hidden" ngModel="{{ editSkills?.idSkill }}" name="idSkill" class="form-control" id="idSkill"
-                            placeholder="" />
-                        <div class="form-group">
-                            <label for="url_logo">Url del Logo</label>
-                            <input type="text" ngModel="{{ editSkills?.url_logo }}" name="url_logo" class="form-control"
-                                id="url_logo" placeholder="url_logo" />
-                        </div>
-                        <div class="form-group">
-                            <label for="descripcion">Porcentaje</label>
-                            <input type="text" ngModel="{{ editSkills?.descripcion }}" name="descripcion"
-                                class="form-control" id="descripcion" placeholder="descripcion" />
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">
-                                Cerrar
-                            </button>
-                            <button (click)="onEditSkill(editForm.value)" data-dismiss="modal" class="btn btn-primary">
-                                Guardar Cambios
-                            </button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- Delete Modal -->
     <div data-bs-toggle="modal" data-bs-target="#deleteSkillsModalLabel" class="modal fade" id="deleteSkillsModal"
@@ -143,7 +100,7 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        ¿Estás seguro que querés borrar esta Skill?
+                        ¿Estás seguro que querés borrar 
                         {{deleteSkills?.nombre}}?
                     </p>
                     <div class="modal-footer">
