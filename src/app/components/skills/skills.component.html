@@ -1,15 +1,16 @@
 <div class="container-fluid formation">
     <h2 class="h2">Skills y Conocimientos</h2>
-    <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal" (click)="onOpenModal('add')">
+    <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
+        (click)="onOpenModal('add')">
         <a class="nav-link" style="color:blanchedalmond">
             Añadir Skills <span class="sr-only"> (current) </span>
         </a>
     </button>
     <div class="text-center"></div>
- 
+
     <div id="main-container">
-    <div *ngFor="let skills of skills">
-        
+        <div *ngFor="let skills of skills">
+
 
             <img src="{{skills.url_logo}}" alt="{{skills.nombre}}" width="50" height="70" />
             <a (click)="onOpenModal('edit', skills)" class="btn btn-info tooltips btn-right" data-placement="top"
@@ -83,7 +84,50 @@
     </div>
 
     <!-- Editar Modal-->
-   
+    <div class="modal fade" id="editSkillsModal" tabindex="-1" role="dialog" aria-labelledby="editSkillsModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editSkillModalLabel"> Editar Skills {{editSkills?.nombre}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true"> &times; </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form #editForm="ngForm">
+                        <div class="form-group">
+                            <label for="nombre"> Nombre </label>
+                            <input type="text" ngModel="{{editSkills?.nombre}}" name="nombre" class="form-control"
+                                id="nombre" aria-describedby="emailHelp" placeholder="Nombre">
+                        </div>
+                        <input type="hidden" ngModel="{{editSkills?.idSkill}}" name="idSkill" class="form-control"
+                            id="idSkill" placeholder="" />
+                        <div class="form-group">
+                            <label for="">Link de la imagen</label>
+                            <input type="text" ngModel="{{editSkills?.url_logo}}" name="url_logo" class="form-control"
+                                id="url_logo" placeholder="url_logo" />
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Información extra</label>
+                            <input type="text" ngModel="{{editSkills?.descripcion}}" name="descripcion"
+                                class="form-control" id="descripcion" placeholder="descripcion" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="" class="btn btn-secondary" data-dismiss="modal">
+                                Cerrar
+                            </button>
+                            <button (click)="onEditSkill(editForm.value)" data-dismiss="modal" class="btn btnprimary">
+                                Guardar Cambios
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Delete Modal -->
     <div data-bs-toggle="modal" data-bs-target="#deleteSkillsModalLabel" class="modal fade" id="deleteSkillsModal"
@@ -100,7 +144,7 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        ¿Estás seguro que querés borrar 
+                        ¿Estás seguro que querés borrar
                         {{deleteSkills?.nombre}}?
                     </p>
                     <div class="modal-footer">
@@ -108,7 +152,8 @@
                             No
 
                         </button>
-                        <button (click)="onDeleteSkill(deleteSkills!.idSkill!)" class="btn btn-danger" data-dismiss="modal">
+                        <button (click)="onDeleteSkill(deleteSkills!.idSkill!)" class="btn btn-danger"
+                            data-dismiss="modal">
                             Si
                         </button>
                     </div>
@@ -117,5 +162,5 @@
 
         </div>
 
-       
+
     </div>
