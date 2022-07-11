@@ -6,7 +6,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AutenticacionService {
-  url="https://floating-hollows-77784.herokuapp.com/api/login"
+  URL="https://floating-hollows-77784.herokuapp.com/api/login"
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http:HttpClient) { 
@@ -15,7 +15,7 @@ export class AutenticacionService {
   }
 
   IniciarSesion(credenciales:any):Observable<any>{
-    return this.http.post(this.url, credenciales).pipe(map(data=>{
+    return this.http.post(this.URL, credenciales).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
       return data;
