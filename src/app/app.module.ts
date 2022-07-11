@@ -17,6 +17,13 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterceptorService } from './service/interceptor.service';
+import { formacion } from './model/formacion.model';
+import { AutenticacionService } from './service/autenticacion.service';
+import { ExpLaboralService } from './service/exp-laboral.service';
+import { FormacionService } from './service/formacion.service';
+import { PersonaService } from './service/persona.service';
+import { ProyectosService } from './service/proyectos.service';
+import { SkillsService } from './service/skills.service';
 
 
 
@@ -46,7 +53,8 @@ import { InterceptorService } from './service/interceptor.service';
     
   
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],
+  providers: [AutenticacionService, ExpLaboralService, FormacionService, PersonaService, ProyectosService, SkillsService,
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
