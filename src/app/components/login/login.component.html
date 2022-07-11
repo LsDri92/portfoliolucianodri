@@ -11,8 +11,9 @@
 
               <form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
                 <div class="form-outline form-white mb-4">
-                  <input type="email" formControlname="email"  class="form-control form-control-lg" id="exampleInputEmail" aria-describedby="emailHelp" />
                   <label for="exampleInputEmail" class="form-label" >Email</label>
+                  <input type="email" formControlname="email"  class="form-control form-control-lg" id="exampleInputEmail" aria-describedby="emailHelp" />
+                 
                   <div *ngIf="Email?.errors && Email?.touched">
                     <p *ngIf="Email?.hasError('required')" class="text-danger">
                       El email es requerido.
@@ -24,9 +25,10 @@
                 </div>
 
                 <div class="form-outline form-white mb-4">
+                  <label class="form-label" for="exampleInputPassword">Contraseña</label>
                   <input type="password" formControlName="password" id="exampleInputPassword"
                     class="form-control form-control-lg" />
-                  <label class="form-label" for="exampleInputPassword">Contraseña</label>
+                
                   <div *ngIf="Password?.errors && Password?.touched">
                     <p *ngIf="Password?.hasError('required')" class="text-danger">
                       La contraseña es requerida.
