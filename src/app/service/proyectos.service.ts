@@ -13,7 +13,7 @@ export class ProyectosService {
   constructor(private http: HttpClient ) { }
 
   public getProyectos(): Observable <proyectos[]>{
-  return this.http.get<proyectos[]>(`${this.URL}/read `);
+  return this.http.get<proyectos[]>(`${this.URL}/read`);
   }
 
   public addProyectos(proyecto: proyectos):Observable <proyectos>{
@@ -21,10 +21,10 @@ export class ProyectosService {
   }
 
   public editProyectos(proyecto: proyectos):Observable <proyectos>{
-    return this.http.put<proyectos>(`${this.URL} /edit`, proyecto);
+    return this.http.put<proyectos>(`${this.URL}/edit`, proyecto);
   }
 
-  public deleteProyectos(proyectoId: number):Observable<void>{
-    return this.http.delete<void>(`${this.URL} /delete/${proyectoId}`);
+  public deleteProyectos(idPro: number):Observable<void>{
+    return this.http.delete<void>(`${this.URL}/delete/${idPro}`);
   }
 }

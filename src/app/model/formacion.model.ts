@@ -1,5 +1,5 @@
 export class formacion {
-    id?: number;
+    idForm?: number;
     titulo: String ;
     ciudad: String ;
     ano_inicio: number ;

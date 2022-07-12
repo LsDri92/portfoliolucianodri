@@ -16,4 +16,17 @@ export class FormacionService {
     return this.http.get<formacion[]>(`${this.URL}/read `);
     }
   
-}
+    public addFormacion(formacion: formacion):Observable <formacion>{
+      return this.http.post<formacion>(`${this.URL}/add`, formacion);
+    }
+  
+    public editFormacion(formacion: formacion):Observable <formacion>{
+      return this.http.put<formacion>(`${this.URL}/edit`, formacion);
+    }
+  
+    public deleteFormacion(idForm: number):Observable<void>{
+      return this.http.delete<void>(`${this.URL}/delete/${idForm}`);
+    }
+  }
+  
+

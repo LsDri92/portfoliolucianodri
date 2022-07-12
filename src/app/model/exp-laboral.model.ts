@@ -1,5 +1,5 @@
 export class exp_laboral {
-    id?: number;
+    idExpe?: number;
     cargo: String;
     ano_inicio: number;
     ano_final: number;
