@@ -1,13 +1,181 @@
 <div class="container-fluid formation">
-
-    
     <h2 class="h2">Formación</h2>
-    <div >
+    <div>
+        <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
+            (click)="onOpenModal('add')">
+            <a class="nav-link" style="color:blanchedalmond">
+                Añadir Skills <span class="sr-only"> (current) </span>
+            </a>
+        </button>
+    </div>
+    <div class="text-center"></div>
+    
+    
+    <div id="main-container">
     <ul *ngFor="let formacion of formacion">
-        <li>{{formacion.titulo}} - {{formacion.descripcion}} -  {{formacion.ciudad}} - {{formacion.ano_inicio}} - {{formacion.ano_final}} </li>
-
-       
-        
+        <li>{{formacion.titulo}} - {{formacion.institucion}} - {{formacion.descripcion}} -  {{formacion.ciudad}} - {{formacion.ano_inicio}} - {{formacion.ano_final}} </li>  
     </ul>
 </div>
+
+
+ <!-- Modal Añadir Skill-->
+ <div class="modal fade" id="addFormacionModal" tabindex="-1" role="dialog" aria-labelledby="addFormacionModalLabel"
+ aria-hidden="true">
+
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="addFormacionModalLabel"> Añadir Formacion</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                 <span aria-hidden="true"> &times; </span>
+             </button>
+         </div>
+         <div class="modal-body">
+             <form #addForm="ngForm" (ngSubmit)="onAddFormacion(addForm)">
+                 <div class="form-group">
+                     <label for="titulo"> Titulo </label>
+                     <input type="text" ngModel name="titulo" class="form-control" id="titulo"
+                         placeholder="Titulo" required>
+
+                 </div>
+                 <div class="form-group">
+                     <label for="institucion"> Nombre de la Institución </label>
+                     <input type="text" ngModel name="institucion" class="form-control" id="institucion"
+                         placeholder="Institucion" required>
+
+                 </div>
+                 <div class="form-group">
+                     <label for="descripcion"> Descripción del titulo/curso </label>
+                     <input type="text" ngModel name="descripcion" class="form-control" id="descripcion"
+                         placeholder="descripcion" required>
+
+                 </div>
+                 <div class="form-group">
+                    <label for="ciudad"> Ciudad </label>
+                    <input type="text" ngModel name="ciudad" class="form-control" id="ciudad"
+                        placeholder="ciudad" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="ano_inicio"> Año de inicio </label>
+                    <input type="text" ngModel name="ano_inicio" class="form-control" id="ano_inicio"
+                        placeholder="ano_inicio" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="ano_final"> Año de final(si sigue en curso, colocar año actual) </label>
+                    <input type="text" ngModel name="ano_final" class="form-control" id="ano_final"
+                        placeholder="ano_final" required>
+
+                </div>
+                 <div class="modal-footer">
+                     <button type="button" id="add-formacion-form" class="btn btn-secondary" data-dismiss="modal">
+                         Cerrar
+
+                     </button>
+                     <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">
+                         Añadir Formacion
+
+                     </button>
+                 </div>
+             </form>
+         </div>
+     </div>
+
+
+
+ </div>
+
+</div>
+
+<!-- Editar Modal-->
+<div class="modal fade" id="editSkillsModal" tabindex="-1" role="dialog" aria-labelledby="editSkillsModalLabel"
+ aria-hidden="true">
+
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="editFormacionModalLabel"> Editar {{editFormacion?.titulo}}</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                 <span aria-hidden="true"> &times; </span>
+             </button>
+         </div>
+         <div class="modal-body">
+             <form #editForm="ngForm">
+                 <div class="form-group">
+                     <label for="titulo"> Titulo </label>
+                     <input type="text" ngModel="{{editFormacion?.titulo}}" name="titulo" class="form-control"
+                         id="titulo" aria-describedby="emailHelp" placeholder="titulo">
+                 </div>
+                 <input type="hidden" ngModel="{{editFormacion?.idForm}}" name="idForm" class="form-control"
+                     id="idForm" placeholder="" />
+                 <div class="form-group">
+                     <label for="institucion">Institucion</label>
+                     <input type="text" ngModel="{{editFormacion?.institucion}}" name="institucion" class="form-control"
+                         id="institucion" placeholder="institucion" />
+                 </div>
+                 <div class="form-group">
+                     <label for="descripcion">Descripción del titulo/Curso</label>
+                     <input type="text" ngModel="{{editFormacion?.descripcion}}" name="descripcion"
+                         class="form-control" id="descripcion" placeholder="descripcion" />
+                 </div>
+                 <div class="form-group">
+                    <label for="ano_inicio">Año de Inicio</label>
+                    <input type="text" ngModel="{{editFormacion?.ano_inicio}}" name="ano_inicio"
+                        class="form-control" id="ano_inicio" placeholder="ano_inicio" />
+                </div>
+                <div class="form-group">
+                    <label for="ano_final">Año de finalización (si sigue en curso, colocar año actual)</label>
+                    <input type="text" ngModel="{{editFormacion?.ano_final}}" name="ano_final"
+                        class="form-control" id="ano_final" placeholder="ano_final" />
+                </div>
+                 <div class="modal-footer">
+                     <button type="button" id="" class="btn btn-secondary" data-dismiss="modal">
+                         Cerrar
+                     </button>
+                     <button (click)="onEditFormacion(editForm.value)" data-dismiss="modal" class="btn btnprimary">
+                         Guardar Cambios
+                     </button>
+                 </div>
+             </form>
+         </div>
+     </div>
+ </div>
+
+</div>
+
+<!-- Delete Modal -->
+<div data-bs-toggle="modal" data-bs-target="#deleteFormacionModalLabel" class="modal fade" id="deleteFormacionModal"
+ tabindex="-1" role="dialog" aria-labelledby="deleteFormacionModalLabel" aria-hidden="true">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="deleteFormacionModalLabel">
+                 Borrar Formacion
+             </h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div class="modal-body">
+             <p>
+                 ¿Estás seguro que querés borrar
+                 {{deleteFormacion?.titulo}}?
+             </p>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                     No
+
+                 </button>
+                 <button (click)="onDeleteFormacion(deleteFormacion!.idForm!)" class="btn btn-danger"
+                     data-dismiss="modal">
+                     Si
+                 </button>
+             </div>
+         </div>
+     </div>
+
+ </div>
+
+
 </div>

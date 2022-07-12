@@ -65,7 +65,7 @@ export class ExpLaboralComponent implements OnInit {
     })
   }
 
-  public onEditExpe(exp_laboral: exp_laboral) {
+  public onEditExperiencia(exp_laboral: exp_laboral) {
     this.editExpe = exp_laboral;
     document.getElementById('add-experiencia-form')?.click();
     this.explaboralService.editExpe(exp_laboral).subscribe({

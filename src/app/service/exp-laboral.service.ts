@@ -24,8 +24,8 @@ export class ExpLaboralService {
     return this.http.put<exp_laboral>(`${this.URL}/edit`, exp_laboral);
   }
 
-  public deleteExpe(idExpe: number):Observable<void>{
-    return this.http.delete<void>(`${this.URL}/delete/${idExpe}`);
+  public deleteExpe(idExp: number):Observable<void>{
+    return this.http.delete<void>(`${this.URL}/delete/${idExp}`);
   }
 
 
