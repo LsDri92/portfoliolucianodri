@@ -1,6 +1,4 @@
 <div class="container-fluid formation">
-
-    <h2 class="h2">Experiencia Laboral</h2>
     <div>
         <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
@@ -9,6 +7,8 @@
             </a>
         </button>
     </div>
+    <h2 class="h2">Experiencia Laboral</h2>
+
     <div class="text-center"></div>
 
     <div id="main-container">
@@ -170,7 +170,8 @@
                         No
 
                     </button>
-                    <button (click)="onDeleteExperiencia(deleteExpe!.idExp!)" class="btn btn-danger" data-dismiss="modal">
+                    <button (click)="onDeleteExperiencia(deleteExpe!.idExp!)" class="btn btn-danger"
+                        data-dismiss="modal">
                         Si
                     </button>
                 </div>

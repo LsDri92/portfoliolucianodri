@@ -1,5 +1,4 @@
 <div class="container-fluid formation">
-    <h2 class="h2">Formación</h2>
     <div>
         <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
@@ -8,11 +7,21 @@
             </a>
         </button>
     </div>
+    <h2 class="h2">Formación</h2>
+   
     <div class="text-center"></div>
     
     
     <div id="main-container">
     <ul *ngFor="let formacion of formacion">
+        <a (click)="onOpenModal('edit', formacion)" class="btn btn-info tooltips btn-right" data-placement="top"
+        data-toggle="tooltip" data-original-title="Edit">
+        <i class="fa fa-edit"></i>
+    </a>
+    <a (click)="onOpenModal('delete', formacion)" class="btn btn-info tooltips btn-right" data-placement="top"
+        data-toggle="tooltip" data-original-title="Delete">
+        <i class="fa fa-eraser"></i>
+    </a>
         <li>{{formacion.titulo}} - {{formacion.institucion}} - {{formacion.descripcion}} -  {{formacion.ciudad}} - {{formacion.ano_inicio}} - {{formacion.ano_final}} </li>  
     </ul>
 </div>
