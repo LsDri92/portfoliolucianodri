@@ -10,7 +10,8 @@
                         src=".\assets\img\61109.png" alt="linkedinlogo" width="75" height="auto"></a></li>
             <li><a href="https://github.com/LsDri92"> <img src=".\assets\img\GitHub-Mark.png" alt="githublogo"
                         width="75" height="auto"></a></li>
-            <li><a href="./login"><button type="button" class="btn btn-info"> Login </button></a></li>
+            <li><a href="./login"><button type="button" class="btn btn-info" (click)="login()" *ngIf="!isLogged"> Login </button></a></li>
+            <li><a href="./login"><button type="button" class="btn btn-info" (click)="onLogOut()" *ngIf="isLogged"> Cerrar Sesion </button></a></li>
         </ul>
 
     </div>

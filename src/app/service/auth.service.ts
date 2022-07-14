@@ -1,31 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { JwtDto } from '../model/jwt-dto';
+import { LoginUsuario } from '../model/login-usuario';
+import { NuevoUsuario } from '../model/nuevoUsuario';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  uri = 'https://floating-hollows-77784.herokuapp.com/api'
+  authURL = 'https://floating-hollows-77784.herokuapp.com/auth/'
 
-  token: any;
  
-  constructor(private httpClient: HttpClient, private router: Router) { }
+  constructor(private httpClient: HttpClient) { }
 
-  login(email: string, password: string) {
-    this.httpClient.post(this.uri + '/login', {email: email, password: password}).subscribe((resp: any) => {
-      this.router.navigate(['portfolio']);
-      sessionStorage.setItem('accesstoken', resp.token);
-    })
+  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
+    return this.httpClient.post<any>(this.authURL + 'nuevo', nuevoUsuario);
   }
 
-  logout() {
-    sessionStorage.removeItem('token');
+  public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
+    return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario);
   }
-
-  public get logIn(): boolean {
-    return(sessionStorage.getItem('token') !== null);
-  }
-
+  
 }
