@@ -6,9 +6,10 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 
 const routes: Routes = [
-    {path:'/portfolio', component: PortfolioComponent},
-    {path:'/login', component: LoginComponent},
-    {path:' ',  component:PortfolioComponent}
+    {path:' ',  component:PortfolioComponent},
+    {path:'portfolio', component: PortfolioComponent},
+    {path:'login', component: LoginComponent}
+    
     
 ];
 
