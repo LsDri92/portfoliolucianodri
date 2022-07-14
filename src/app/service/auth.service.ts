@@ -16,7 +16,7 @@ export class AuthService {
   login(email: string, password: string) {
     this.httpClient.post(this.uri + '/login', {email: email, password: password}).subscribe((resp: any) => {
       this.router.navigate(['portfolio']);
-      sessionStorage.setItem('auth_token', resp.token);
+      sessionStorage.setItem('accesstoken', resp.token);
     })
   }
 
