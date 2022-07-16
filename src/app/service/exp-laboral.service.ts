@@ -8,7 +8,7 @@ import { exp_laboral } from '../model/exp-laboral.model';
 })
 export class ExpLaboralService {
 
-  URL = 'https://floating-hollows-77784.herokuapp.com/api/explaboral';
+  URL = 'https://lucianosdri-api.herokuapp.com/api/explaboral';
 
   constructor(private http: HttpClient ) {  }
 

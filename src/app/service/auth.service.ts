@@ -11,17 +11,17 @@ import { NuevoUsuario } from '../model/nuevoUsuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://floating-hollows-77784.herokuapp.com/auth/'
+  authURL = 'https://lucianosdri-api.herokuapp.com/auth/'
 
  
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.authURL + 'nuevo', nuevoUsuario);
+    return this.httpClient.post<any>(this.authURL+'nuevo', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario);
+    return this.httpClient.post<JwtDto>(this.authURL+'login', loginUsuario);
   }
   
 }

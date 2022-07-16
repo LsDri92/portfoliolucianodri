@@ -8,7 +8,7 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
 
-  URL = 'https://floating-hollows-77784.herokuapp.com/api/persona/';
+  URL = 'https://lucianosdri-api.herokuapp.com/api/persona/';
 
   constructor(private http: HttpClient) { }
 

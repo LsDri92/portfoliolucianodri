@@ -8,7 +8,7 @@ import { skills } from '../model/skills.model';
 })
 export class SkillsService {
 
-  URL = 'https://floating-hollows-77784.herokuapp.com/api/skills';
+  URL = 'https://lucianosdri-api.herokuapp.com/api/skills';
 
   constructor(private http: HttpClient ) { }
 

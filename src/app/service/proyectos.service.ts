@@ -8,7 +8,7 @@ import { proyectos } from '../model/proyectos.model';
 })
 export class ProyectosService {
 
-  URL = 'https://floating-hollows-77784.herokuapp.com/api/proyectos';
+  URL = 'https://lucianosdri-api.herokuapp.com/api/proyectos';
 
   constructor(private http: HttpClient ) { }
 
