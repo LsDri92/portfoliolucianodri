@@ -21,25 +21,3 @@ img title {
     color: blueviolet;
 }
 
-/* Invisible texto */
-figcaption {
-    display:none; 
-    transition: all .5s;
-    color: chocolate;
-    font-size: 25px;
-    font-style: oblique;
-    align-items: flex-end;
-  }
-  /* Visible texto */
-  figure:hover > figcaption {
-    display:block;
-    transition: all .5s;
-  }
-
-  progress {
-    -webkit-appearance: none;
-  }
-  
-  ::-webkit-progress-bar {
-     background-color: rgb(255, 255, 255);
-  }
