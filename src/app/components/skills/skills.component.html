@@ -13,7 +13,7 @@
 
     <div id="main-container">
         <div *ngFor="let skills of skills">
-            <a (click)="onOpenModal('edit', skills)" class="btn btn-info tooltips btn-right" data-placement="top"
+            <a *ngIf="isLogged" (click)="onOpenModal('edit', skills)" class="btn btn-info tooltips btn-right" data-placement="top"
                 data-toggle="tooltip" data-original-title="Edit">
                 <i class="fa fa-edit"></i>
             </a>
