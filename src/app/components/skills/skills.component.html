@@ -1,6 +1,6 @@
 <div class="container-fluid formation">
     <div>
-        <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
+        <button *ngIf="isLogged" type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
             <a class="nav-link" style="color:blanchedalmond">
                 Añadir Skills <span class="sr-only"> (current) </span>
@@ -17,7 +17,7 @@
                 data-toggle="tooltip" data-original-title="Edit">
                 <i class="fa fa-edit"></i>
             </a>
-            <a (click)="onOpenModal('delete', skills)" class="btn btn-info tooltips btn-right" data-placement="top"
+            <a *ngIf="isLogged" (click)="onOpenModal('delete', skills)" class="btn btn-info tooltips btn-right" data-placement="top"
                 data-toggle="tooltip" data-original-title="Delete">
                 <i class="fa fa-eraser"></i>
             </a>
