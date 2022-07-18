@@ -11,6 +11,7 @@ import { FormacionService } from 'src/app/service/formacion.service';
 })
 export class FormacionComponent implements OnInit {
 
+
   public formacion: formacion[] = [];
   public editFormacion: formacion | undefined;
   public deleteFormacion: formacion | undefined;

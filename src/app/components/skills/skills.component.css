@@ -35,3 +35,11 @@ figcaption {
     display:block;
     transition: all .5s;
   }
+
+  progress {
+    -webkit-appearance: none;
+  }
+  
+  ::-webkit-progress-bar {
+     background-color: rgb(255, 255, 255);
+  }
