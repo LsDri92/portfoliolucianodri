@@ -2,7 +2,7 @@
     <div>
         <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
-            <a class="nav-link" style="color:blanchedalmond">
+            <a *ngIf="isLogged" class="nav-link" style="color:blanchedalmond">
                 Añadir Experiencia Laboral <span class="sr-only"> (current) </span>
             </a>
         </button>
@@ -13,11 +13,11 @@
 
     <div id="main-container">
         <div *ngFor="let exp_laboral of exp_laboral">
-            <a (click)="onOpenModal('edit', exp_laboral)" class="btn btn-info tooltips btn-right" data-placement="top"
+            <a *ngIf="isLogged" (click)="onOpenModal('edit', exp_laboral)" class="btn btn-info tooltips btn-right" data-placement="top"
                 data-toggle="tooltip" data-original-title="Edit">
                 <i class="fa fa-edit"></i>
             </a>
-            <a (click)="onOpenModal('delete', exp_laboral)" class="btn btn-info tooltips btn-right" data-placement="top"
+            <a *ngIf="isLogged" (click)="onOpenModal('delete', exp_laboral)" class="btn btn-info tooltips btn-right" data-placement="top"
                 data-toggle="tooltip" data-original-title="Delete">
                 <i class="fa fa-eraser"></i>
             </a>

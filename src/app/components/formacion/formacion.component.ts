@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { formacion } from 'src/app/model/formacion.model';
 import { FormacionService } from 'src/app/service/formacion.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-formacion',
@@ -15,10 +16,17 @@ export class FormacionComponent implements OnInit {
   public formacion: formacion[] = [];
   public editFormacion: formacion | undefined;
   public deleteFormacion: formacion | undefined;
-  constructor(private formacionService: FormacionService) { }
+  isLogged = false;
+  
+  constructor(private formacionService: FormacionService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.getFormacion();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
 

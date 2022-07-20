@@ -8,23 +8,24 @@
         </button>
     </div>
     <h2 class="h2">Hard & Soft Skills</h2>
-   
+
     <div class="text-center"></div>
 
     <div id="main-container">
         <div *ngFor="let skills of skills">
-            <a *ngIf="isLogged" (click)="onOpenModal('edit', skills)" class="btn btn-info tooltips btn-right" data-placement="top"
-                data-toggle="tooltip" data-original-title="Edit">
+            <a *ngIf="isLogged" (click)="onOpenModal('edit', skills)" class="btn btn-info tooltips btn-right"
+                data-placement="top" data-toggle="tooltip" data-original-title="Edit">
                 <i class="fa fa-edit"></i>
             </a>
-            <a *ngIf="isLogged" (click)="onOpenModal('delete', skills)" class="btn btn-info tooltips btn-right" data-placement="top"
-                data-toggle="tooltip" data-original-title="Delete">
+            <a *ngIf="isLogged" (click)="onOpenModal('delete', skills)" class="btn btn-info tooltips btn-right"
+                data-placement="top" data-toggle="tooltip" data-original-title="Delete">
                 <i class="fa fa-eraser"></i>
             </a>
-
-            <img class="logoimg" src="{{skills.url_logo}}" alt="{{skills.nombre}}" width="8%" height="8%" />
-            
-
+            <div class="row">
+                <div class="col align-self-center">
+                    <img class="logoimg" src="{{skills.url_logo}}" alt="{{skills.nombre}}" width="8%" height="8%" />
+                </div>
+            </div>
         </div>
 
 

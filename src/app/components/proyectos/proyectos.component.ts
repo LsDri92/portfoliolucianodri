@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { proyectos } from 'src/app/model/proyectos.model';
 import { ProyectosService } from 'src/app/service/proyectos.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -14,12 +15,17 @@ export class ProyectosComponent implements OnInit {
   public proyectos: proyectos[] = [];
   public editProyectos: proyectos | undefined;
   public deleteProyectos: proyectos | undefined;
+  isLogged = false;
 
-
-  constructor(private proyectosService: ProyectosService) { }
+  constructor(private proyectosService: ProyectosService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.getProyectos();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
   public getProyectos(): void {

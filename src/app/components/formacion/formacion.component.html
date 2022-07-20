@@ -2,7 +2,7 @@
     <div>
         <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
-            <a class="nav-link" style="color:blanchedalmond">
+            <a *ngIf="isLogged" class="nav-link" style="color:blanchedalmond">
                 Añadir Formacion <span class="sr-only"> (current) </span>
             </a>
         </button>
@@ -14,11 +14,11 @@
     
     <div id="main-container">
     <ul *ngFor="let formacion of formacion">
-        <a (click)="onOpenModal('edit', formacion)" class="btn btn-info tooltips btn-right" data-placement="top"
+        <a *ngIf="isLogged" (click)="onOpenModal('edit', formacion)" class="btn btn-info tooltips btn-right" data-placement="top"
         data-toggle="tooltip" data-original-title="Edit">
         <i class="fa fa-edit"></i>
     </a>
-    <a (click)="onOpenModal('delete', formacion)" class="btn btn-info tooltips btn-right" data-placement="top"
+    <a  *ngIf="isLogged" (click)="onOpenModal('delete', formacion)" class="btn btn-info tooltips btn-right" data-placement="top"
         data-toggle="tooltip" data-original-title="Delete">
         <i class="fa fa-eraser"></i>
     </a>

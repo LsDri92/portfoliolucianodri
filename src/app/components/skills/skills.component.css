@@ -2,6 +2,8 @@
     padding: 15px;
     margin-top: 10px;
     align-items: center;
+    align-content: center;
+    align-self: center;
 }
 
 ul li {
@@ -23,4 +25,8 @@ img title {
 
 .fa {
     size: 5cm;
+}
+
+img{
+    margin-left: 25%;
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { exp_laboral } from 'src/app/model/exp-laboral.model';
 import { ExpLaboralService } from 'src/app/service/exp-laboral.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-exp-laboral',
@@ -14,11 +15,17 @@ export class ExpLaboralComponent implements OnInit {
   public exp_laboral: exp_laboral[] = [];
   public editExpe: exp_laboral | undefined;
   public deleteExpe: exp_laboral | undefined;
+  isLogged = false;
 
-  constructor(private explaboralService: ExpLaboralService) { }
+  constructor(private explaboralService: ExpLaboralService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.getExperiencia();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
   public getExperiencia(): void {

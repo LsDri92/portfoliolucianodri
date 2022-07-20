@@ -13,11 +13,11 @@
 
     <div id="main-container">
         <div *ngFor="let proyectos of proyectos">
-            <a (click)="onOpenModal('edit', proyectos)" class="btn btn-info tooltips btn-right" data-placement="top"
+            <a *ngIf="isLogged" (click)="onOpenModal('edit', proyectos)" class="btn btn-info tooltips btn-right" data-placement="top"
                 data-toggle="tooltip" data-original-title="Edit">
                 <i class="fa fa-edit"></i>
             </a>
-            <a (click)="onOpenModal('delete', proyectos)" class="btn btn-info tooltips btn-right" data-placement="top"
+            <a *ngIf="isLogged" (click)="onOpenModal('delete', proyectos)" class="btn btn-info tooltips btn-right" data-placement="top"
                 data-toggle="tooltip" data-original-title="Delete">
                 <i class="fa fa-eraser"></i>
             </a>
