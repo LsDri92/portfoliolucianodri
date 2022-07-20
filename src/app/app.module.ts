@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 
@@ -41,7 +42,9 @@ import { interceptorProvider } from './service/interceptor-service';
     RouterModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgCircleProgressModule.forRoot({})
+  
     
     
   

@@ -12,10 +12,12 @@
     <div class="text-center"></div>
 
     <div id="main-container">
-        <div class="container text center">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+
             <div *ngFor="let skills of skills">
-                <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
+                
+                    
                         <a *ngIf="isLogged" (click)="onOpenModal('edit', skills)"
                             class="btn btn-info tooltips btn-right" data-placement="top" data-toggle="tooltip"
                             data-original-title="Edit">
@@ -26,9 +28,10 @@
                             data-original-title="Delete">
                             <i class="fa fa-eraser"></i>
                         </a>
-
-                        <img class="logoimg" src="{{skills.url_logo}}" alt="{{skills.nombre}}" width="20%"
-                            height="auto" /> - <p>{{skills.nombre}}</p>
+                        
+<img src="{{skills.url_logo}}" alt="{{skills.nombre}}" height="auto" width="20%" >
+                
+                               
                     </div>
                 </div>
             </div>
