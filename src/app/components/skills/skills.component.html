@@ -1,4 +1,4 @@
-<div class="container formation">
+<div class="container-fluid formation">
     <div>
         <button *ngIf="isLogged" type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
@@ -14,29 +14,28 @@
 
     <div id="main-container">
         <div class="row">
-            <div class="col-sm-4">
 
-                <div *ngFor="let skills of skills">
-
-
-                    <a *ngIf="isLogged" (click)="onOpenModal('edit', skills)" class="btn btn-info tooltips btn-right"
-                        data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                        <i class="fa fa-edit"></i>
-                    </a>
-                    <a *ngIf="isLogged" (click)="onOpenModal('delete', skills)" class="btn btn-info tooltips btn-right"
-                        data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                        <i class="fa fa-eraser"></i>
-                    </a>
-
-                    <img class="logoimg" src="{{skills.url_logo}}" alt="{{skills.nombre}}" height="auto" width="20%">
+            <div class="col-4" *ngFor="let skills of skills">
 
 
-                </div>
+                <a *ngIf="isLogged" (click)="onOpenModal('edit', skills)" class="btn btn-info tooltips btn-right"
+                    data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a *ngIf="isLogged" (click)="onOpenModal('delete', skills)" class="btn btn-info tooltips btn-right"
+                    data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                    <i class="fa fa-eraser"></i>
+                </a>
+
+                <img class="logoimg" src="{{skills.url_logo}}" alt="{{skills.nombre}}" height="auto" width="20%">
+
+
             </div>
         </div>
     </div>
-
 </div>
+
+
 
 <!-- Modal Añadir Skill-->
 <div class="modal fade" id="addSkillsModal" tabindex="-1" role="dialog" aria-labelledby="addSkillsModalLabel"
