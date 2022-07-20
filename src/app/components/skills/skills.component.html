@@ -14,8 +14,8 @@
     <div id="main-container">
         <div class="container text center">
             <div *ngFor="let skills of skills">
-                <div class="row row-cols-3">
-                    <div class="col-4">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
                         <a *ngIf="isLogged" (click)="onOpenModal('edit', skills)"
                             class="btn btn-info tooltips btn-right" data-placement="top" data-toggle="tooltip"
                             data-original-title="Edit">
