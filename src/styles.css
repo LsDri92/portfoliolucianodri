@@ -139,6 +139,8 @@
 .h2{
     padding: 10px;
     margin: 8px;
+    text-decoration: underline;
+    text-size-adjust: 10cm;
 }
 
 .formation ul li{
@@ -149,11 +151,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .formation{
-    margin: 4em;
+    margin: 2em;
     padding: 1em;
     border:  #02999E ;
     border-style: solid;
-    border-radius: 20%;
+    border-radius: 5%;
     border-left: 20px;
     border-right: 20px;
 }
