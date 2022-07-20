@@ -1,8 +1,8 @@
 <div class="container-fluid formation">
     <div>
-        <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
+        <button *ngIf="isLogged" type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
-            <a *ngIf="isLogged" class="nav-link" style="color:blanchedalmond">
+            <a  class="nav-link" style="color:blanchedalmond">
                 Añadir Formacion <span class="sr-only"> (current) </span>
             </a>
         </button>

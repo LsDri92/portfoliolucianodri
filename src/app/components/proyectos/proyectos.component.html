@@ -1,6 +1,6 @@
 <div class="container-fluid formation">
     <div>
-        <button type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
+        <button *ngIf="isLogged" type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
             <a class="nav-link" style="color:blanchedalmond">
                 Añadir Proyecto <span class="sr-only"> (current) </span>
