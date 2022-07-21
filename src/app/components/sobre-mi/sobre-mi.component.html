@@ -41,6 +41,21 @@
             <div class="modal-body">
                 <form #editForm="ngForm">
                     <div class="form-group">
+                        <label for="nombre"> Nombre </label>
+                        <input type="text" ngModel="{{editPersona?.nombre}}" name="nombre" class="form-control"
+                            id="nombre" aria-describedby="emailHelp" placeholder="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="lugar"> Lugar de Residencia </label>
+                        <input type="text" ngModel="{{editPersona?.lugar}}" name="lugar" class="form-control"
+                            id="lugar" aria-describedby="emailHelp" placeholder="lugar">
+                    </div>
+                    <div class="form-group">
+                        <label for="profesion"> Foto </label>
+                        <input type="text" ngModel="{{editPersona?.profesion}}" name="profesion" class="form-control"
+                            id="profesion" aria-describedby="emailHelp" placeholder="profesion">
+                    </div>
+                    <div class="form-group">
                         <label for="url_foto"> Foto </label>
                         <input type="text" ngModel="{{editPersona?.url_foto}}" name="url_foto" class="form-control"
                             id="url_foto" aria-describedby="emailHelp" placeholder="url_foto">
