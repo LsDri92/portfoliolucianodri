@@ -152,8 +152,8 @@
 }
 .formation{
     margin: 2em;
+    margin-right: 2em;
     padding: 1em;
-    border: 80%;
     border:  #02999E ;
     border-style: solid;
     border-radius: 5%;
