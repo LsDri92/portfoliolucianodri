@@ -153,11 +153,11 @@
 .formation{
     margin: 2em;
     padding: 1em;
+    border: 80%;
     border:  #02999E ;
     border-style: solid;
     border-radius: 5%;
-    border-left: 20px;
-    border-right: 20px;
+   
 }
 
 
