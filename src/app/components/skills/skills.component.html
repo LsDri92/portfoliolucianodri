@@ -1,4 +1,4 @@
-<div class="container-fluid formation">
+<div class="container-md formation">
     <div>
         <button *ngIf="isLogged" type="button" class="btn btn-success btn-right items-align" data-toggle="modal"
             (click)="onOpenModal('add')">
@@ -28,7 +28,7 @@
                 </a>
 
                 <img class="logoimg" src="{{skills.url_logo}}" alt="{{skills.nombre}}" height="auto" width="40%">
-
+                <p>{{skills.descripcion}}</p>
 
             </div>
         </div>
@@ -64,9 +64,9 @@
 
                     </div>
                     <div class="form-group">
-                        <label for="descripcion"> Porcentaje de progreso (sin %) </label>
+                        <label for="descripcion"> Descripción </label>
                         <input type="text" ngModel name="descripcion" class="form-control" id="descripcion"
-                            placeholder="Porcentaje" required>
+                            placeholder="Descripción" required>
 
                     </div>
                     <div class="modal-footer">
@@ -116,7 +116,7 @@
                             id="url_logo" placeholder="url_logo" />
                     </div>
                     <div class="form-group">
-                        <label for="descripcion">Información extra</label>
+                        <label for="descripcion">Descripción</label>
                         <input type="text" ngModel="{{editSkills?.descripcion}}" name="descripcion" class="form-control"
                             id="descripcion" placeholder="descripcion" />
                     </div>
