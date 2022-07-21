@@ -197,10 +197,5 @@
     font-size: large;
 }
 
-@media (max-width: 575.98px)
-{
-.img {
-    width:60%,
-}
-}
+
 }
