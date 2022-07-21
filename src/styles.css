@@ -73,8 +73,8 @@
     border-style: double;
     border-bottom: #00EB87;
     border: #00EB87;
-    width:100%;
-    margin: 10;
+    width:90%;
+    
 }
 
 .sobremi{
@@ -157,6 +157,8 @@
     border:  #02999E ;
     border-style: solid;
     border-radius: 5%;
+    border-right: 10cm;
+    border-left: 10cm;
    
 }
 
